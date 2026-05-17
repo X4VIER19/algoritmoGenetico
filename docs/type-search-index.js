@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.x4vier19.algoritmogenetico","l":"AlgoritmoGenetico"},{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"}];updateSearchResults();
