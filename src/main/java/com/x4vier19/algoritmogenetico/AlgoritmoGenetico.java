@@ -40,6 +40,6 @@ public class AlgoritmoGenetico {
         }
         System.out.println("");
     }
-    
+
     
 }
