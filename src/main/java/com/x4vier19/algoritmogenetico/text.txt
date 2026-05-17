@@ -21,9 +21,6 @@ public class AlgoritmoGenetico {
     static double[] probabilidades = new double[numIndividuos];
 
     public static void main(String[] args) {
-        // aquí el usuario podrá ingresar el número de pocas
-       
-
         crearPoblacionInicial();
         imprimirPoblacion();
         calcularFitness(); // cuantos genes coinciden con la solución ideal (todos 1s)
@@ -31,7 +28,7 @@ public class AlgoritmoGenetico {
         imprimirPoblacionOrganizada();
         calcularProbabilidades();
         imprimirProbabilidades();
-        // Cruzamiento();
+        // seleccionPoblacion();
         // Aquí se podrían agregar métodos para selección, cruce y mutación.
         // Tambien solicitar al usuario un número de epochs para iterar el proceso de
         // evolución.
@@ -75,6 +72,7 @@ public class AlgoritmoGenetico {
     }
 
     public static void organizarPoblacion() {
+
         // Ordenar del mejor fitness al peor
         for (int i = 0; i < numIndividuos - 1; i++) {
 
@@ -110,14 +108,19 @@ public class AlgoritmoGenetico {
     }// Fin del método imprimirPoblacionOrganizada
 
     public static void calcularProbabilidades() {
+
         // Suma total de pesos:
         int sumaPesos = 0;
+
         for (int i = 0; i < numIndividuos; i++) {
             sumaPesos += (numIndividuos - i);
         }
+
         // Calcular probabilidad de cada individuo
         for (int i = 0; i < numIndividuos; i++) {
+
             int peso = (numIndividuos - i);
+
             probabilidades[i] = (double) peso / sumaPesos;
         }
     }
